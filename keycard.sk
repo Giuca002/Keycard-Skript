@@ -179,7 +179,7 @@ command /keycard:
 		send "&c-----------------------------------------" to player
 		send "&cVersion 1.0.0" to player
 		send "&cMade by Giuca002" to player
-		send "&cGithub: " to player
+		send "&cGithub: https://github.com/Giuca002/Keycard-Skript " to player
 		send "&cHelp: Check GitHub " to player
 		send "&c-----------------------------------------" to player
 
