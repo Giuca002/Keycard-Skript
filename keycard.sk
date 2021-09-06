@@ -1,0 +1,190 @@
+#  _  __                            _
+# | |/ /___ _   _  ___ __ _ _ __ __| |___
+# | ' // _ | | | |/ __/ _` | '__/ _` / __|
+# | . |  __| |_| | (_| (_| | | | (_| \__ \
+# |_|\_\___|\__, |\___\__,_|_|  \__,_|___/
+#          |___/
+
+options:
+	#Blocks down Dont touch ...3 is default
+	down: 3
+	actionbar: action
+	#if actionbar is set to chat it will display messages in chat if set to action it will be action bar if set to both its both
+	#Card Information... ex: {@l1} {@name} <= thats the card layout
+	name: ACCESS CARD
+	l1: &bL1 
+	l2: &6L2 
+	l3: &cL3 
+	l4: &0L4 
+	l5: &5L5
+	m: &9MASTER
+	# Error Messages ...You cant use varibles in error messages or success messages type it manually :(
+	El1: &cYou need a L1 ACCESS CARD or higher.
+	El2: &cYou need a L2 ACCESS CARD or higher.
+	El3: &cYou need a L3 ACCESS CARD or higher.
+	El4: &cYou need a L4 ACCESS CARD or higher.
+	El5: &cYou need a L5 ACCESS CARD or higher.
+	# Success Message
+	Sl1: &aAccess Granted.
+	Sl2: &aAccess Granted.
+	Sl3: &aAccess Granted.
+	Sl4: &aAccess Granted.
+	Sl5: &aAccess Granted.
+	#Blocks
+	l1block: light blue concrete
+	l2block: orange concrete 
+	l3block: red concrete
+	l4block: black concrete
+	l5block: purple concrete
+	#Buttons
+	l1button: stone button
+	l2button: stone button
+	l3button: stone button
+	l4button: stone button
+	l5button: stone button
+	#Keycard item block
+	l1item: light blue stained glass pane 
+	l2item: orange stained glass pane
+	l3item: red stained glass pane
+	l4item: black stained glass pane
+	l5item: purple stained glass pane
+	mitem: blue stained glass pane
+
+on rightclick on {@l1button}:
+	if block at location {@down} meters below the event-block is {@l1block}:
+		if name of player's held item is "{@l1} {@name}" or "{@l2} {@name}" or "{@l3} {@name}" or "{@l4} {@name}" or "{@l5} {@name}" or "{@m} {@name}":
+			if "{@actionbar}" is "chat": 
+				send "{@Sl1}" to player
+			if "{@actionbar}" is "action": 
+				send action bar "{@Sl1}" to player
+			if "{@actionbar}" is "both": 
+				send "{@Sl1}" to player
+				send action bar "{@Sl1}" to player
+				wait 1 second
+		else:
+			cancel event
+			if "{@actionbar}" is "chat": 
+				send "{@El1}" to player
+			if "{@actionbar}" is "action": 
+				send action bar "{@El1}" to player
+			if "{@actionbar}" is "both": 
+				send "{@El1}" to player
+				send action bar "{@El1}" to player
+				wait 1 second
+
+on rightclick on {@l2button}:
+	if block at location {@down} meters below the event-block is orange concrete:
+		if name of player's held item is "{@l2} {@name}" or "{@l3} {@name}" or "{@l4} {@name}" or "{@l5} {@name}" or "{@m} {@name}":
+			if "{@actionbar}" is "chat": 
+				send "{@Sl2}" to player
+			if "{@actionbar}" is "action": 
+				send action bar "{@Sl2}" to player
+			if "{@actionbar}" is "both": 
+				send "{@Sl2}" to player
+				send action bar "{@Sl2}" to player
+				wait 1 second
+		else:
+			cancel event
+			if "{@actionbar}" is "chat": 
+				send "{@El2}" to player
+			if "{@actionbar}" is "action": 
+				send action bar "{@El2}" to player
+			if "{@actionbar}" is "both": 
+				send "{@El2}" to player
+				send action bar "{@El2}" to player
+				wait 1 second
+
+on rightclick on {@l3button}:
+	if block at location {@down} meters below the event-block is red concrete:
+		if name of player's held item is "{@l3} {@name}" or "{@l4} {@name}" or "{@l5} {@name}" or "{@m} {@name}":
+			if "{@actionbar}" is "chat": 
+				send "{@Sl3}" to player
+			if "{@actionbar}" is "action": 
+				send action bar "{@Sl3}" to player
+			if "{@actionbar}" is "both": 
+				send "{@Sl3}" to player
+				send action bar "{@Sl3}" to player
+				wait 1 second
+		else:
+			cancel event
+			if "{@actionbar}" is "chat": 
+				send "{@El3}" to player
+			if "{@actionbar}" is "action": 
+				send action bar "{@El3}" to player
+			if "{@actionbar}" is "both": 
+				send "{@El3}" to player
+				send action bar "{@El3}" to player
+				wait 1 second
+
+on rightclick on {@l4button}:
+	if block at location {@down} meters below the event-block is black concrete:
+		if name of player's held item is "{@l4} {@name}" or "{@l5} {@name}" or "{@m} {@name}":
+			if "{@actionbar}" is "chat": 
+				send "{@Sl4}" to player
+			if "{@actionbar}" is "action": 
+				send action bar "{@Sl4}" to player
+			if "{@actionbar}" is "both": 
+				send "{@Sl4}" to player
+				send action bar "{@Sl4}" to player
+				wait 1 second
+		else:
+			cancel event
+			if "{@actionbar}" is "chat": 
+				send "{@El4}" to player
+			if "{@actionbar}" is "action": 
+				send action bar "{@El4}" to player
+			if "{@actionbar}" is "both": 
+				send "{@El4}" to player
+				send action bar "{@El4}" to player
+				wait 1 second
+
+on rightclick on {@l5button}:
+	if block at location {@down} meters below the event-block is purple concrete:
+		if name of player's held item is "{@l5} {@name}" or "{@m} {@name}":
+			if "{@actionbar}" is "chat": 
+				send "{@Sl5}" to player
+			if "{@actionbar}" is "action": 
+				send action bar "{@Sl5}" to player
+			if "{@actionbar}" is "both": 
+				send "{@Sl5}" to player
+				send action bar "{@Sl5}" to player
+				wait 1 second
+		else:
+			cancel event
+			if "{@actionbar}" is "chat": 
+				send "{@El5}" to player
+			if "{@actionbar}" is "action": 
+				send action bar "{@El5}" to player
+			if "{@actionbar}" is "both": 
+				send "{@El5}" to player
+				send action bar "{@El5}" to player
+				wait 1 second
+
+on place:
+	if name of player's held item is "{@l1} {@name}" or "{@l2} {@name}" or "{@l3} {@name}" or "{@l4} {@name}" or "{@l5} {@name}" or "{@m} {@name}":
+		cancel event
+
+command /keychain:
+	permission: op
+	trigger:
+		give player 1 {@l1item} named "{@l1} {@name}"
+		give player 1 {@l2item} named "{@l2} {@name}"
+		give player 1 {@l3item} named "{@l3} {@name}"
+		give player 1 {@l4item} named "{@l4} {@name}"
+		give player 1 {@l5item} named "{@l5} {@name}"
+		give player 1 {@mitem} named "{@m} {@name}"
+
+command /keycard:
+	trigger:
+		send "&c-----------------------------------------" to player
+		send "&cVersion 1.0.0" to player
+		send "&cMade by Giuca002" to player
+		send "&cGithub: " to player
+		send "&cHelp: Check GitHub " to player
+		send "&c-----------------------------------------" to player
+
+#   ____ _                  ___   ___ ____
+#  / ___(_)_   _  ___ __ _ / _ \ / _ |___ \
+# | |  _| | | | |/ __/ _` | | | | | | |__) |
+# | |_| | | |_| | (_| (_| | |_| | |_| / __/
+# \____|_|\__,_|\___\__,_|\___/ \___|_____|
